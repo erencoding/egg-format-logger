@@ -1,0 +1,42 @@
+{
+  "name": "@seewoedu/egg-seewoedu-logger",
+  "version": "1.0.4",
+  "description": "logger plugin for egg used by Seewo College team",
+  "eggPlugin": {
+    "name": "seewoeduLogger",
+    "env": [
+      "local",
+      "test",
+      "unittest",
+      "prod"
+    ]
+  },
+  "files": [
+    "app/**",
+    "app.js",
+    "lib/**"
+  ],
+  "scripts": {
+    "ii": "yarn && cd example && yarn",
+    "build": "tsc",
+    "lk": "yarn link && cd example && yarn link @seewoedu/egg-seewoedu-logger ",
+    "dev": "yarn lk && cd example && yarn dev"
+  },
+  "dependencies": {
+    "egg-ts-helper": "^1.25.9",
+    "js-shortid": "^0.1.1"
+  },
+  "keywords": [
+    "egg",
+    "egg-plugin",
+    "eggPlugin",
+    "egg-logger",
+    "egg-seewoedu-logger",
+    "logger"
+  ],
+  "devDependencies": {
+    "egg": "^2.29.4",
+    "egg-logger": "^2.6.1",
+    "typescript": "^4.2.4"
+  }
+}
