@@ -22,8 +22,9 @@ function getLoggerList(app: Application) {
 }
 
 async function initLogger(app: Application) {
-  const config = (app && app.config && app.config.seewoeduLogger) || {};
+  const config = (app && app.config && app.config.formatLogger) || {};
   const fileDir = config.dir || app.config.logger.dir || `${process.cwd()}/logs`;
+  const formatter = config.formatter;
   if (!fileDir) {
     return;
   }
@@ -37,6 +38,7 @@ async function initLogger(app: Application) {
     const file = path.join(fileDir, formatLogFileName(app, loggerName));
     const fileTransportOptions = {
       file,
+      formatter,
       ...config.fileTransportOptions,
     };
     (logger as any).set('file', new CustomFileTransport(fileTransportOptions));

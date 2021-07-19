@@ -14,7 +14,7 @@ import 'egg-schedule';
 import 'egg-static';
 import 'egg-jsonp';
 import 'egg-view';
-import '@seewoedu/egg-seewoedu-logger';
+import 'egg-format-logger';
 import { EggPluginItem } from 'egg';
 declare module 'egg' {
   interface EggPlugin {
@@ -30,6 +30,6 @@ declare module 'egg' {
     static?: EggPluginItem;
     jsonp?: EggPluginItem;
     view?: EggPluginItem;
-    seewoeduLogger?: EggPluginItem;
+    formatLogger?: EggPluginItem;
   }
 }

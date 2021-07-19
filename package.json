@@ -1,9 +1,9 @@
 {
-  "name": "@seewoedu/egg-seewoedu-logger",
+  "name": "egg-format-logger",
   "version": "1.0.4",
   "description": "logger plugin for egg used by Seewo College team",
   "eggPlugin": {
-    "name": "seewoeduLogger",
+    "name": "formatLogger",
     "env": [
       "local",
       "test",
@@ -19,7 +19,7 @@
   "scripts": {
     "ii": "yarn && cd example && yarn",
     "build": "tsc",
-    "lk": "yarn link && cd example && yarn link @seewoedu/egg-seewoedu-logger ",
+    "lk": "yarn link && cd example && yarn link egg-format-logger ",
     "dev": "yarn lk && cd example && yarn dev"
   },
   "dependencies": {
@@ -31,8 +31,10 @@
     "egg-plugin",
     "eggPlugin",
     "egg-logger",
-    "egg-seewoedu-logger",
-    "logger"
+    "logger",
+    "format",
+    "format-logger",
+    "egg-format-logger"
   ],
   "devDependencies": {
     "egg": "^2.29.4",

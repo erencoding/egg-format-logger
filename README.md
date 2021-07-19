@@ -1,17 +1,17 @@
-# @seewoedu/egg-seewoedu-logger
+# egg-format-logger
 ## Introduction
 教师发展部使用的日志打印egg插件
 ## Install
 ```
-npm i @seewoedu/egg-seewoedu-logger --registry=http://nexus.gz.cvte.cn/nexus/repository/npm-group/ --save
+npm i egg-format-logger --registry=http://nexus.gz.cvte.cn/nexus/repository/npm-group/ --save
 ```
 ## Usage
 ##### 开启插件
 ```
 // config/plugin.js
-exports.seewoeduLogger = {
+exports.formatLogger = {
   enable: true,
-  package: '@seewoedu/egg-seewoedu-logger',
+  package: 'egg-format-logger',
 };
 ```
 ## Description

@@ -1,9 +1,9 @@
 import { EggPlugin } from 'egg';
 
 const plugin: EggPlugin = {
-  seewoeduLogger: {
+  formatLogger: {
     enable: true,
-    package: '@seewoedu/egg-seewoedu-logger',
+    package: 'egg-format-logger',
   }
 };
 

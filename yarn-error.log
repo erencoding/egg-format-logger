@@ -32,7 +32,7 @@ npm manifest:
     "version": "1.0.0",
     "description": "logger plugin for egg used by Seewo College team",
     "eggPlugin": {
-      "name": "seewoeduLogger",
+      "name": "formatLogger",
       "env": [
         "local",
         "test",
