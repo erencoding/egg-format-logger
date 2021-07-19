@@ -1,7 +1,7 @@
 {
   "name": "egg-format-logger",
-  "version": "1.0.4",
-  "description": "logger plugin for egg used by Seewo College team",
+  "version": "0.0.1",
+  "description": "An egg plugin for formatting logs. This plugin and [egg-logger](https://github.com/eggjs/egg-logger) to work together.",
   "eggPlugin": {
     "name": "formatLogger",
     "env": [

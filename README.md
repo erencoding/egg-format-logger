@@ -1,31 +1,39 @@
 # egg-format-logger
-## Introduction
-教师发展部使用的日志打印egg插件
+English | [简体中文](./README-zh_CN.md)
+## Introduced
+An egg plugin for formatting logs. This plugin and [egg-logger](https://github.com/eggjs/egg-logger) to work together.
 ## Install
+```shell
+npm i egg-format-logger --save
 ```
-npm i egg-format-logger --registry=http://nexus.gz.cvte.cn/nexus/repository/npm-group/ --save
-```
-## Usage
-##### 开启插件
-```
-// config/plugin.js
+## Configuration
+Change `${app_root}/config/plugin.js` to to enable this plugin.
+
+```js
 exports.formatLogger = {
   enable: true,
   package: 'egg-format-logger',
 };
 ```
-## Description
-##### 日志格式
-```
-[时间][进程ID][日志级别]::[客户端IP][traceId][用户ID][User Agent][请求方法 请求连接 请求用时]::具体信息
-```
-ps: 如果数据项为空则不显示
 
-## Example
+Configure information in `${app_root}/config/config.default.js  `
+```js
+config.formatLogger = {
+  formatter: (meta) => {
+    return  `[${meta.date}][${meta.pid}][${meta.level}][${meta?.ctx?.response?.status}]::${meta.message}`;
+  }
+}
 ```
-ctx.logger.error('打印一个错误');
-```
-## Test
+#### Meta
+| property | description |
+| -- | -- |  
+| ctx | [Egg.Context](https://eggjs.org/en/basics/objects.html#context) |
+| paddingMessage | Part of the request information, including the domain name, request time, request method |  
+| level   | The level of logging |  
+| date   | The current time |  
+| pid   | The process ID |  
+| hostname  | The host name |  
+| message | Log information to be printed |
 
-```
-```
+## License
+[MIT](./LICENSE)

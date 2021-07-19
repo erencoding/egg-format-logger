@@ -15,6 +15,12 @@ export default (appInfo: EggAppInfo) => {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
   };
 
+  config.formatLogger = {
+    formatter (meta: any) {
+      return  `[${meta.date}][${meta.pid}][${meta.level}][${meta?.ctx?.response?.status}]::${meta.message}`;
+    }
+  }
+
   // the return config will combines to EggAppConfig
   return {
     ...config,
