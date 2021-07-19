@@ -1,6 +1,6 @@
 {
   "name": "egg-format-logger",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "An egg plugin for formatting logs. This plugin and [egg-logger](https://github.com/eggjs/egg-logger) to work together.",
   "eggPlugin": {
     "name": "formatLogger",
